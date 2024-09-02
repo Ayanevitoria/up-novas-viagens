@@ -1,0 +1,110 @@
+/* ESTILO DESKTOP */
+*{
+    font-family:'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:url(https://cdn.pixabay.com/photo/2016/10/24/22/43/dubai-1767540_1280.jpg) no-repeat;
+    background-position:center;
+    background-size:cover;
+  }
+  .overlay{
+    position:relative;
+    z-index:0;
+    width:100%;
+    height:100vh;
+    background:#842EBC30;
+  }
+  .content{
+    position:absolute;
+    width: 550px;
+    background:#7DD9FE20;
+    backdrop-filter:blur(4px);
+    color: #fff;
+    border-radius:50px;
+    padding:40px 4%;
+    z-index:10000;
+  }
+  .content h1{
+    font-size: 26px;
+    text-align: center;
+    color:#2DA8FB;
+  }
+  .content .flex{
+    display:flex;
+    gap:30px;
+  }
+  .content .flex .input-box input{
+    width:100%;
+  }
+  .content .input-box{
+    width: 100%;
+    height:50px;
+    margin:20px 0;
+  }
+  .input-box label{
+    display:inline-block;
+    margin-bottom:8px;
+  }
+  .input-box input{
+    width:100%;
+    height:65%;
+    background:transparent;
+    border: 1px solid #7DD9FE;
+    outline:none;
+    border-radius: 6px;
+    color:#fff;
+    font-size:16px;
+    padding: 10px 2%;
+  }
+  .content .btn-login{
+    margin: 10px 32%;
+    padding: 8px 40px;
+    background:#2DA8FB;
+    color:#fff;
+    border:none;
+    border-radius: 6px;
+    outline:none;
+    font-size:16px;
+    font-weight:500;
+    cursor: pointer;
+  }
+  
+  /* ESTILO MOBILE */
+  @media screen and (max-width: 1024px){
+    .content{
+      width: 100%;
+      height:100vh;
+      border-radius:0px;
+      padding:64px 8%;
+    }
+    .content h1{
+      font-size: 24px;
+    }
+    .content .flex{
+      display:flex;
+      flex-direction:column;
+      gap:0;
+    }
+    .content .input-box{
+      width: 100%;
+      height:50px;
+      margin:8px 0;
+    }
+    .input-box label{
+      font-size: 14px;
+      margin-bottom:4px;
+    }
+    .content .btn-login{
+      margin: 16px 0 0 0;
+      padding: 8px 0;
+      width:100%;
+      font-size:14px;
+    }
+  }

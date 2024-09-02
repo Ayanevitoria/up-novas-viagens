@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--STYLE-->
+  <link rel="stylesheet" href="{{url_for('static', filename='style/cadastro.css')}}">
+  <!--FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <title>UP! - Cadastro</title>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="content">
+    <form action="{{url_for('cadastro')}}" method="post">
+      <h1>Cadastro</h1>
+      <div class="flex">
+        <div class="input-box">
+          <label for="primeironome">Primeiro nome</label><br>
+          <input type="text" name="primeironome" required>
+        </div>
+        <div class="input-box">
+          <label for="sobrenome">Sobrenome</label><br>
+          <input type="text" name="sobrenome" required>
+        </div>
+      </div>
+
+      <div class="input-box">
+        <label for="email">E-mail</label><br>
+        <input type="text" name="email" required>
+      </div>
+
+      <div class="flex">
+        <div class="input-box">
+          <label for="senha">Senha</label><br>
+          <input type="password" name="senha" required>
+        </div>
+        <div class="input-box">
+          <label for="csenha">Confirme a senha</label><br>
+          <input type="password" name="csenha" required>
+        </div>
+      </div>
+
+      <button class="btn-login" type="submit">Cadastrar</button>
+    </form>
+  </div>
+</body>
+</html>
