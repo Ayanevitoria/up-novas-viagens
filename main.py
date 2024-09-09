@@ -1,22 +1,17 @@
-from flask import Flask, render_template, request, redirect, url_for#, flash
+from flask import Flask, render_template, request, redirect, url_for, flash
 from database import db,lm
 from flask_migrate import Migrate
-from flask_login import login_user, logout_user, login_required, current_user
-from models.usuario import Usuario
+from flask_login import login_user, logout_user, login_required, current_user, LoginManager
+from models import Usuario
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'up123viagens'
 
-#dados do servidor
-usuario = "Stella"
-senha = "Upvamosvoar123"
-servidor = "up-novas-viagens.mysql.database.azure.com"
-banco = "up-novas-viagens"
 
-#conexão
-conexao = "mysql+pymysql://{}:{}@{}/{}".format(usuario, senha, servidor, banco)
-
+conexao = 'mysql+pymysql://anakezia:Ann%401500@db4free.net/bancoddedadoskez'
 app.config['SQLALCHEMY_DATABASE_URI'] = conexao
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -29,20 +24,27 @@ migrate = Migrate(app, db)
 def index():
     return render_template('index.html')
 
+@lm.user_loader
+def load_user(user_id):
+    return Usuario.query.get(int(user_id))
+
+    
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-  if request.method == 'GET':
-    return render_template('login.html')
-  elif request.method == 'POST':
-    email = request.form.get('email')
-    senha = request.form.get('senha')
-    usuario = Usuario.query.filter_by(email = email).first()
+    if request.method == 'GET':
+        return render_template('login.html')
+    elif request.method == 'POST':
+        email = request.form.get('email')
+        senha = request.form.get('senha')
+        usuario = Usuario.query.filter_by(email=email).first()
 
-    if usuario and senha == usuario.senha:
-        login_user(usuario)
-        return redirect(url_for('home'))
-    else:
-        return redirect(url_for('login'))
+        if usuario and senha == usuario.senha:
+            login_user(usuario)
+            return redirect(url_for('index'))
+        else:
+            flash('Email ou senha inválidos', 'error')
+            return redirect(url_for('login'))
+
 
 @app.route('/usuariorecovery')
 @login_required

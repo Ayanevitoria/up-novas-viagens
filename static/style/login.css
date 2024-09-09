@@ -121,3 +121,24 @@
       font-size:14px;
     }
   }
+
+
+
+  .flash-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que a barra apareça acima de outros conteúdos */
+}
+
+.flash-messages {
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.flash.error {
+    background-color: #000;
+}
+
