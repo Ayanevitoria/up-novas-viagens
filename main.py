@@ -5,6 +5,7 @@ from flask_login import login_user, logout_user, login_required, current_user, L
 from models import Usuario
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__)
 
@@ -70,4 +71,5 @@ def cadastro():
     return redirect(url_for('login'))
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port) 
