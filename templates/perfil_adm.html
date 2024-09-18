@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- LINK DO BOOTSTRAP ICONS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='style/perfil_adm.css')}}">
+  <title>Home</title>
+</head>
+<body>
+  <header>
+    <div class="interface">
+      <div class="logo">
+        <a href="#"><img src="imgs/Logo.png" alt="logo up novas viagens"></a>
+      </div><!-- logo -->
+      <nav class="menu-desktop">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Perfil</a></li>
+          <li><a href="#">Pesquisar</a></li>
+        </ul>
+      </nav><!-- menu-desktop -->
+      <div class="btn-radius">
+        <a href="login.html">
+          <button>Login</button>
+        </a>
+        <a href="#">
+          <button>Cadastro</button>
+        </a>
+      </div><!-- btn-radius -->
+    </div><!--interface-->
+  </header><!-- header -->
+  
+  <section class="main-one">
+    <div class="interface">
+      <div class="flex">
+        <div class="home-text">
+          <div class="flex">
+            <div class="left flex">
+              <div class="user-img"></div>
+              <div class="btn-quarq">
+                <a href="#">
+                 <button>Mudar foto</button>
+                </a>
+              </div><!-- btn-quarq -->
+            </div>
+            <div class="right">
+              <p>Nome</p>
+              <p class="p">Maria Silva</p>
+              <p>Email</p>
+              <p class="p">maria@exemplo.com</p>
+              <div class="btn-quarq">
+                <a href="#">
+                 <button>Editar conta</button>
+                </a>
+                <a href="#">
+                 <button class= "ghost">Excluir conta</button>
+                </a>
+              </div><!-- btn-quarq -->
+            </div>
+          </div>
+          <div class="flex especial">
+            <div class="btn-big">
+              <a href="#">
+                <button>Usuários comuns</button>
+              </a>
+              <a href="#">
+                <button class="m-e">Usuários Aeroportos</button>
+              </a>
+            </div>
+          </div>
+
+        </div><!-- home-text -->
+      </div><!-- flex -->
+    </div>
+  </section>
+  
+  <footer>
+    <div class="interface">
+      <div class="line-footer">
+        <div class="flex">
+          <div class="logo-footer">
+            <img src="imgs/Logo.png" alt="logo up novas viagens">
+          </div><!-- logo-footer -->
+          <div class="btn-social">
+            <a href=""><button><i class="bi bi-youtube"></i></button></a>
+            <a href=""><button><i class="bi bi-facebook"></i></button></a>
+            <a href=""><button><i class="bi bi-twitter"></i></button></a>
+            <a href=""><button><i class="bi bi-instagram"></i></button></a>
+            <a href=""><button><i class="bi bi-linkedin"></i></button></a>
+          </div>
+        </div><!-- flex -->
+      </div><!-- line-footer -->
+      
+      <div class="line-footer">
+        <p>UP! Novas Viagens @ 2024. All rights reserved.</p>
+      </div><!-- line-footer -->
+    </div><!-- interface -->
+  </footer><!-- footer -->
+</body>
+</html>

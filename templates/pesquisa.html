@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- LINK DO BOOTSTRAP ICONS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="{{url_for('static', filename='style/index.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='style/pesquisa.css')}}">
   <title>Home</title>
 </head>
 <body>
@@ -23,10 +23,10 @@
         </ul>
       </nav><!-- menu-desktop -->
       <div class="btn-radius">
-        <a href="{{url_for('login')}}">
+        <a href="login.html">
           <button>Login</button>
         </a>
-        <a href="{{url_for('bifurcacao')}}">
+        <a href="#">
           <button>Cadastro</button>
         </a>
       </div><!-- btn-radius -->
@@ -37,14 +37,10 @@
     <div class="interface">
       <div class="flex">
         <div class="home-text">
-          <h2>Bem-Vindo </h2>
-          <h1>UP! Novas Viagens</h1>
-          <p>There are many variations of passages of Lorem Ipsum available, but the  majority have suffered alteration in some form, by injected humour, or  randomised words which don't look even slightly believable.</p>
-          <div class="btn-quarq">
-            <a href="#">
-              <button>Pesquisar</button>
-            </a>
-          </div><!-- btn-quarq -->
+            <form action="">
+              <input type="text" class="bar" placeholder="Ex.: Aeroporto de Guarulhos">
+              <button type="submit" class="icon-button"><i class="bi bi-search"></i></button>
+            </form>
         </div><!-- home-text -->
       </div><!-- flex -->
     </div>
@@ -54,28 +50,15 @@
     <div class="interface">
       <div class="flex">
         <div class="main-two-text">
-          <h2>O que é o UP?</h2>
-          <p class="e-space">There are many variations of passages of Lorem Ipsum available, but the  majority have suffered alteration in some form, by injected humour, or  randomised words which don't look even slightly believable. There are many variations of passages of Lorem Ipsum available, but the  majority have suffered alteration in some form, by injected humour, or  randomised words which don't look even slightly believable.</p>
-          <h2>Aeroportos mais acessados</h2>
-          <div class="flex">
-            <div class="block">
-              <div class="image"></div>
-              <h4>Aeroporto de Congonhas</h4>
-            </div>
-            <div class="block">
-              <div class="image"></div>
-              <h4>Aeroporto de Guarulhos</h4>
-            </div>
-            <div class="block">
-              <div class="image"></div>
-              <h4>Aeroporto de São Gonçalo do Amarante</h4>
-            </div>
-            <div class="block">
-              <div class="image"></div>
-              <h4>Aeroporto Santos Dumont</h4>
-            </div>
-          </div><!--     flex       -->
-          <p class="e-40">There are many variations of passages of Lorem Ipsum available, but the  majority have suffered alteration in some form, by injected humour, or  randomised words which don't look even slightly believable. There are many variations of passages of Lorem Ipsum available, but the  majority have suffered alteration in some form, by injected humour, or  randomised words which don't look even slightly believable.</p>
+          <h3>Resultados da sua busca</h3>
+          <div class="camp">
+            <p>Nome do aeroporto</p>
+            <div class="btn-radius">
+              <a href="#">
+                <button>Ver orientações</button>
+              </a>
+            </div><!-- btn-radius -->
+          </div>
         </div><!--     main-two-text     -->
       </div><!--    flex    -->
     </div><!--   interface   -->

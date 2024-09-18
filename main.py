@@ -47,11 +47,11 @@ def login():
             return redirect(url_for('login'))
 
 
-@app.route('/usuariorecovery')
+@app.route('/usuariorecovery',  methods=['GET', 'POST'])
 @login_required
 def usuariorecovery():
     if current_user.admin == 0:
-        return redirect('/login')
+        return redirect('/')
 
     user=Usuario.query.all()
     return render_template('usuario_recovery.html', user=user)
@@ -69,6 +69,25 @@ def cadastro():
     db.session.add(user)
     db.session.commit()
     return redirect(url_for('login'))
+
+
+#rotas adicionais
+@app.route('/bifurcacao', methods=['GET','POST'])
+def bifurcacao():
+    return render_template('bifurcacao.html')
+
+@app.route('/perfil_usuario', methods=['GET','POST'])
+def perfil_usuario():
+    return render_template('perfil_usuario.html')
+
+@app.route('/perfil_aeroporto', methods=['GET','POST'])
+def perfil_aeroporto():
+    return render_template('perfil_aeroporto.html')
+
+@app.route('/pesquisa', methods=['GET','POST'])
+def pesquisa():
+    return render_template('pesquisa.html')
+
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))

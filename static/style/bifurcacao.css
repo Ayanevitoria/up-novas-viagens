@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  body{
+    height:100vh;
+  }
+  a{
+    text-decoration:none;
+  }
+  .interface{
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .btn-radius button{
+    padding: 10px 24px;
+    border: 1px solid #842EBC;
+    color: #842EBC;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #f6f6f6;
+  }
+  .btn-radius button:hover{
+    background-color: #842EBC;
+    color: #fff;
+  }
+  
+  /* estilo do cabeçalho */
+  header{
+    padding: 32px 4%;
+  }
+  header > .interface{
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Estilo Main one */
+  section.main-one{
+    padding: 204px 4%;
+    color:#842EBC;
+    text-align:center;
+  }
+  section.main-one .home-text h1{
+    font-weight: 800;
+    font-size: 36px;
+  }
+  section.main-one .home-text p{
+    padding-top:48px;
+    padding-bottom: 64px;
+    font-size: 24px;
+    color:#4f4f4f;
+  }
+  .btn-quarq button{
+    padding: 10px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    background-color: #842EBC;
+  }
+  .btn-quarq button:hover{
+    background-color: #7DD9FE;
+    color: #3630B3;
+  }
+  .btn-quarq .e-88{
+    margin-right:88px;
+  }
+  
+    

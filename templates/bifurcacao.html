@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for('static', filename='style/bifurcacao.css')}}">
+  <title>Via de cadastro</title>
+</head>
+<body>
+  <header>
+    <div class="interface">
+      <div class="btn-radius">
+        <a href="{{url_for('index')}}">
+          <button>Voltar</button>
+        </a>
+      </div><!-- btn-radius -->
+    </div><!--interface-->
+  </header><!-- header -->
+  
+  <section class="main-one">
+    <div class="interface">
+      <div class="flex">
+        <div class="home-text">
+          <h1>Olá! Antes de continuar nos responda a seguinte pergunta:</h1>
+          <p>Você usará nosso sistema como um viajante ou como uma empresa?</p>
+          <div class="btn-quarq">
+            <a href="{{url_for('login')}}">
+              <button class="e-88">Viajante</button>
+            </button>
+            <a href="#">
+              <button>Empresa</button>
+            </a>
+          </div><!-- btn-quarq -->
+        </div><!-- home-text -->
+      </div><!-- flex -->
+    </div>
+  </section>
+</body>
+</html>
